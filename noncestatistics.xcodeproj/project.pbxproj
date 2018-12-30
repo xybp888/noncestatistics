@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -148,6 +148,7 @@
 				E97845791D7EF5F400798C24 /* Sources */,
 				E978457A1D7EF5F400798C24 /* Frameworks */,
 				E978457B1D7EF5F400798C24 /* CopyFiles */,
+				56931EB821D8D40600A88574 /* Version bump */,
 			);
 			buildRules = (
 			);
@@ -164,8 +165,8 @@
 		E97845751D7EF5F400798C24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Malte Poll";
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = tihmstar;
 				TargetAttributes = {
 					E978457C1D7EF5F400798C24 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -173,7 +174,7 @@
 				};
 			};
 			buildConfigurationList = E97845781D7EF5F400798C24 /* Build configuration list for PBXProject "noncestatistics" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -187,6 +188,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56931EB821D8D40600A88574 /* Version bump */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Version bump";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sed -i '.bak' \"s/.*VERSION_COMMIT_COUNT_NONCESTATISTICS.*/#define VERSION_COMMIT_COUNT_NONCESTATISTICS \\\"$(git rev-list --count HEAD)\\\"/\" ./noncestatistics/all.h 2>/dev/null || sed -i \"s/.*VERSION_COMMIT_COUNT_NONCESTATISTICS.*/#define VERSION_COMMIT_COUNT_NONCESTATISTICS \\\"$(git rev-list --count HEAD)\\\"/\" ./noncestatistics/all.h 2>/dev/null\nsed -i '.bak' \"s/.*VERSION_COMMIT_SHA_NONCESTATISTICS.*/#define VERSION_COMMIT_SHA_NONCESTATISTICS \\\"$(git rev-parse HEAD)\\\"/\" ./noncestatistics/all.h 2>/dev/null || sed -i \"s/.*VERSION_COMMIT_SHA_NONCESTATISTICS.*/#define VERSION_COMMIT_SHA_NONCESTATISTICS \\\"$(git rev-parse HEAD)\\\"/\" ./noncestatistics/all.h 2>/dev/null\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E97845791D7EF5F400798C24 /* Sources */ = {
@@ -217,13 +239,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -266,13 +298,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";

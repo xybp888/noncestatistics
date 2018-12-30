@@ -18,7 +18,7 @@
 #include <fstream>
 #include <unistd.h>
 #include "stats.hpp"
-#include "all_noncestatistics.h"
+#include "all.h"
 
 #define USEC_PER_SEC 1000000
 
