@@ -148,8 +148,6 @@ int dfu_send_buffer(struct idevicerestore_client_t* client, unsigned char* buffe
 	return 0;
 }
 
-
-
 int dfu_get_cpid(struct idevicerestore_client_t* client, unsigned int* cpid) {
 	if(client->dfu == NULL) {
 		if (dfu_client_new(client) < 0) {

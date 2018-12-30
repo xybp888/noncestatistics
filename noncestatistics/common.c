@@ -241,4 +241,3 @@ char *generate_guid(void)
 	guid[36] = '\0';
 	return guid;
 }
-

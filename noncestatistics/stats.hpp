@@ -1,3 +1,8 @@
+//
+//  stats.hpp
+//  noncestatistics
+//
+
 #ifndef stats_hpp
 #define stats_hpp
 
@@ -7,6 +12,5 @@
 
 std::vector<std::pair<std::string, int> > sortNonceList(std::map<std::string, int>& nonceList);
 void cmd_statistics(const char* filename);
-
 
 #endif /* stats_hpp */

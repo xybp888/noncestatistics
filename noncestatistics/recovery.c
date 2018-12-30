@@ -67,7 +67,7 @@ int recovery_client_new(struct idevicerestore_client_t* client) {
 		memset(client->recovery, 0, sizeof(struct recovery_client_t));
 	}
 
-	//for (i = 1; i <= attempts; i++) {
+	// for (i = 1; i <= attempts; i++) {
     while(1){
 		recovery_error = irecv_open_with_ecid(&recovery, client->ecid);
 		if (recovery_error == IRECV_E_SUCCESS) {
@@ -120,7 +120,6 @@ int recovery_check_mode(struct idevicerestore_client_t* client) {
 
 	return 0;
 }
-
 
 int recovery_get_ecid(struct idevicerestore_client_t* client, uint64_t* ecid) {
 	if(client->recovery == NULL) {
@@ -210,8 +209,3 @@ int recovery_set_autoboot(struct idevicerestore_client_t* client, int enable) {
     
     return 0;
 }
-
-
-
-
-

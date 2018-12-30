@@ -1,3 +1,8 @@
+//
+//  stats.cpp
+//  noncestatistics
+//
+
 #include "stats.hpp"
 #include <iostream>
 #include <regex>
@@ -13,7 +18,6 @@ std::vector<std::pair<std::string, int> > sortNonceList(std::map < std::string, 
     
     return sortedList;
 }
-
 
 void cmd_statistics(const char* filename){
     int amount = 0;
@@ -35,18 +39,18 @@ void cmd_statistics(const char* filename){
     
     std::vector<std::pair<std::string, int> > sortedList = sortNonceList(nonceList);
     
-    std::cout << "nonce                                     abs. frequency    rel. frequency" << std::endl;
-    std::cout << "===========================================================================" << std::endl;
+    std::cout << "ApNonce                                     abs. frequency    rel. frequency" << std::endl;
+    std::cout << "=============================================================================" << std::endl;
     long collisions = 0;
     for (auto p: sortedList) {
         if (p.second == 1) continue;
         collisions++;
         printf("%s         %4d             %2.3f%%\n",p.first.c_str(),p.second,100*((float)p.second/amount));
     }
-    std::cout << "===========================================================================" << std::endl;
-    std::cout << "nonce                                     abs. frequency    rel. frequency" << std::endl<<std::endl;
+    std::cout << "=============================================================================" << std::endl;
+    std::cout << "ApNonce                                     abs. frequency    rel. frequency" << std::endl<<std::endl;
     
     if (collisions == 0) std::cout <<  "There were no collisions found!"<<std::endl<<std::endl;
     
-    std::cout << "There is a total of "<< amount << " nonces" << std::endl;
+    std::cout << "There is a total of "<< amount << " ApNonces" << std::endl;
 }
