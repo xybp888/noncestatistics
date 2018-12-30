@@ -21,8 +21,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifndef IDEVICERESTORE_RECOVERY_H
-#define IDEVICERESTORE_RECOVERY_H
+#ifndef RECOVERY_H
+#define RECOVERY_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -53,4 +53,4 @@ int recovery_send_reset(struct idevicerestore_client_t* client);
 }
 #endif
 
-#endif
+#endif /* recovery_h */

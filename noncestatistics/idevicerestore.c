@@ -90,7 +90,6 @@ void idevicerestore_client_free(struct idevicerestore_client_t* client)
 	free(client);
 }
 
-
 int check_mode(struct idevicerestore_client_t* client) {
 	int mode = MODE_UNKNOWN;
 	int dfumode = MODE_UNKNOWN;
@@ -106,11 +105,7 @@ int check_mode(struct idevicerestore_client_t* client) {
 	else if (normal_check_mode(client) == 0) {
 		mode = MODE_NORMAL;
 	}
-
-//	else if (restore_check_mode(client) == 0) {
-//		mode = MODE_RESTORE;
-//	}
-
+    
 	if (mode == MODE_UNKNOWN) {
 		client->mode = NULL;
 	} else {
@@ -128,15 +123,13 @@ const char* check_hardware_model(struct idevicerestore_client_t* client) {
 	}
 
 	switch (mode) {
-//	case MODE_RESTORE:
-//		hw_model = restore_check_hardware_model(client);
-//		break;
 
 	case MODE_NORMAL:
 		hw_model = normal_check_hardware_model(client);
 		break;
 
 	case MODE_DFU:
+            
 	case MODE_RECOVERY:
 		hw_model = dfu_check_hardware_model(client);
 		break;
@@ -223,13 +216,6 @@ int get_ap_nonce(struct idevicerestore_client_t* client, unsigned char** nonce, 
 		error("ERROR: Device is in an invalid state\n");
 		return -1;
 	}
-
-//	int i = 0;
-//    info("ApNonce=");
-//	for (i = 0; i < *nonce_size; i++) {
-//		info("%02x", (*nonce)[i]);
-//	}
-//	info("\n");
 
 	return 0;
 }

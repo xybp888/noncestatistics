@@ -21,8 +21,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifndef IDEVICERESTORE_COMMON_H
-#define IDEVICERESTORE_COMMON_H
+#ifndef COMMON_H
+#define COMMON_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -101,7 +101,6 @@ struct idevicerestore_client_t {
 };
 
 extern struct idevicerestore_mode_t idevicerestore_modes[];
-
 extern int idevicerestore_debug;
 
 void info(const char* format, ...);
@@ -115,4 +114,4 @@ void idevicerestore_progress(struct idevicerestore_client_t* client, int step, d
 }
 #endif
 
-#endif
+#endif /* common_h */
