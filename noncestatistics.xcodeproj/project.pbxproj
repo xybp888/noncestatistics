@@ -20,6 +20,8 @@
 		56931EB121D8D22400A88574 /* libplist.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56931EB021D8D22400A88574 /* libplist.3.dylib */; };
 		56931EB321D8D22B00A88574 /* libssl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56931EB221D8D22B00A88574 /* libssl.3.dylib */; };
 		56931EB521D8D23200A88574 /* libusbmuxd.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56931EB421D8D23200A88574 /* libusbmuxd.4.dylib */; };
+		56931EB621D8D38600A88574 /* endianness.h in Sources */ = {isa = PBXBuildFile; fileRef = 56931E9921D8D19100A88574 /* endianness.h */; };
+		56931EB721D8D38900A88574 /* all.h in Sources */ = {isa = PBXBuildFile; fileRef = 56931E9121D8D18100A88574 /* all.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -175,7 +177,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 			);
 			mainGroup = E97845741D7EF5F400798C24;
 			productRefGroup = E978457E1D7EF5F400798C24 /* Products */;
@@ -192,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56931EB621D8D38600A88574 /* endianness.h in Sources */,
 				56931EA121D8D19900A88574 /* recovery.c in Sources */,
 				56931EA721D8D1B400A88574 /* stats.cpp in Sources */,
 				56931E9B21D8D19100A88574 /* dfu.c in Sources */,
@@ -199,6 +201,7 @@
 				56931EA921D8D1BB00A88574 /* main.cpp in Sources */,
 				56931EA021D8D19900A88574 /* normal.c in Sources */,
 				56931E9421D8D18A00A88574 /* common.c in Sources */,
+				56931EB721D8D38900A88574 /* all.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,9 +245,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.noncestatistics;
+				PRODUCT_NAME = noncestatistics;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -280,8 +288,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.noncestatistics;
+				PRODUCT_NAME = noncestatistics;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -290,12 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/usr/local/Cellar/libplist/1.12/lib,
-					/usr/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -304,12 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/usr/local/Cellar/libplist/1.12/lib,
-					/usr/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
