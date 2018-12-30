@@ -1,9 +1,9 @@
 AC_PREREQ([2.69])
-AC_INIT([noncestatistics], [1.0.0], [tihmstar@gmail.com])
+AC_INIT([noncestatistics], [1.0], [https://github.com/s0uthwest/noncestatistics])
 # prepare for automake
 AM_INIT_AUTOMAKE([foreign])
 
-AC_CONFIG_SRCDIR([noncestatistics/all_noncestatistics.h])
+AC_CONFIG_SRCDIR([noncestatistics/all.h])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -22,11 +22,10 @@ case $host_os in
 esac
 
 # Checks for libraries.
-
 PKG_CHECK_MODULES(libplist, libplist >= 1.0)
 PKG_CHECK_MODULES(libimobiledevice, libimobiledevice-1.0 >= 1.2.1)
 PKG_CHECK_MODULES(libirecovery, libirecovery >= 0.2.0)
-
+PKG_CHECK_MODULES(libusbmuxd, libusbmuxd >= 0.29.1)
 
 # Checks for header files.
 AC_CHECK_HEADERS([stddef.h stdlib.h string.h unistd.h])
@@ -44,7 +43,5 @@ AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 AC_CHECK_FUNCS([memset mkdir pow strchr strdup strstr])
 
-
 AC_CONFIG_FILES([Makefile noncestatistics/Makefile])
 AC_OUTPUT
-
