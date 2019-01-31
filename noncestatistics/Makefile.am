@@ -5,4 +5,5 @@ bin_PROGRAMS = noncestatistics
 noncestatistics_CXXFLAGS = $(AM_CXXFLAGS)
 noncestatistics_CFLAGS = $(AM_CXXFLAGS)
 noncestatistics_LDADD = $(AM_LDFLAGS)
+noncestatistics_LDFLAGS = -all-static -static-libgcc -static-libstdc++ $(AM_LDFLAGS)
 noncestatistics_SOURCES = common.c dfu.c idevicerestore.c normal.c recovery.c stats.cpp main.cpp
